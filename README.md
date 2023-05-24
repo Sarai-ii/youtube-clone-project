@@ -4,3 +4,4 @@ Group Members: Joanavel, Sarai, Jennifer, Finesse.
 
 Here is my change. --Jennifer
 Here is my change. --Sarai
+Here's my lil changeychange. -Finesse
