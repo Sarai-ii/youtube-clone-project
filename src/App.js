@@ -7,6 +7,8 @@ import Home from "./components/Home"
 import About from "./components/About"
 import Videos from "./components/Videos"
 import Video from "./components/Video"
+import Nav from "./components/Nav"
+import Footer from "./components/Footer"
 
 
 
@@ -17,16 +19,17 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/videos" element={<Videos />} />
-          <Route path="/video/:id" element={<Video />} /> 
+     <p>Working App</p>
+     <Router>
+        {/* <Nav /> */}
+        {/* <Routes> */}
+          {/* <Route path="/" element={<Home />} /> */}
+          {/* <Route path="/about" element={<About />} /> */}
+          {/* <Route path="/videos" element={<Videos />} /> */}
+          {/* <Route path="/video/:id" element={<Video />} />  */}
           {/* Checkout using Asterik for pathways and how it affects 404 page */}
-        </Routes>
-        <Footer />
+        {/* </Routes> */}
+        {/* <Footer /> */}
       </Router>
     </div>
   );
