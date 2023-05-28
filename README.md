@@ -20,13 +20,6 @@ Jennifer, developer
 
 Finesse, developer
 
-## Original Changes
-
-Here is my change. --Jennifer
-Is it working ?--- Joanavel
-Here is my change. --Sarai
-Here's my lil changeychange. -Finesse
-
 ## Technologies Used
 
 * React
@@ -77,6 +70,12 @@ TBD
 TBD
 TBD
 
-
-
-[![](https://mermaid.ink/img/pako:eNpNjzFrQzEMhP-K0Jy1i9eGDoVAIFkKXtTne4mDnxRkuxBC_nvdPgLRdPp0iLs7T5bAgS_WXXGLSmNabgX0ZZ2O_Rv0XkxBe7cLprY66lDZlI5n0BY_KHaF1_VGdBCXHOjtuX9kRa14IZ9QzTP8FZmojE8D8YYX-CI5jWT3P0PkdsaCyGHIhFl6aZGjPoZVerPDTScOzTs23K9JGrZZTi4Lh1lKHRQpN_Pd2va_9OMX8r9RQw?type=png)](https://mermaid.live/edit#pako:eNpNjzFrQzEMhP-K0Jy1i9eGDoVAIFkKXtTne4mDnxRkuxBC_nvdPgLRdPp0iLs7T5bAgS_WXXGLSmNabgX0ZZ2O_Rv0XkxBe7cLprY66lDZlI5n0BY_KHaF1_VGdBCXHOjtuX9kRa14IZ9QzTP8FZmojE8D8YYX-CI5jWT3P0PkdsaCyGHIhFl6aZGjPoZVerPDTScOzTs23K9JGrZZTi4Lh1lKHRQpN_Pd2va_9OMX8r9RQw)
+```mermaid
+journey
+    title You Tube Clone Project
+    section Project Manager
+        Sarai: 5
+    section The Rest of the Developers
+      Finesse: 5
+      Jennifer: 5
+      Joanavel: 5
