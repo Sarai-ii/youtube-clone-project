@@ -18,7 +18,7 @@ export default function Home() {
     function handleSubmit(event) {
         event.preventDefault();
         return fetch(
-          `https://youtube.googleapis.com/youtube/v3/search?q=${search}&key=${key}&part=snippet&type=video&maxResults=20`
+          `https://youtube.googleapis.com/youtube/v3/search?q=${search}&key=${key}&part=snippeet&type=video&maxResults=20`
         )
           .then((results) => results.json())
           .then((response) => {
