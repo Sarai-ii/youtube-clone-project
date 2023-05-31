@@ -9,7 +9,7 @@ import Videos from "./components/Videos"
 import Video from "./components/Video"
 import Nav from "./components/Nav"
 import Footer from "./components/Footer"
-
+import ModalWindow from "./components/ModalWindow";
 
 
 // Styling 
