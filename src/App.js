@@ -19,17 +19,17 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-     <p>Working App</p>
+     {/* <p>Working App</p> */}
      <Router>
-        {/* <Nav /> */}
-        {/* <Routes> */}
-          {/* <Route path="/" element={<Home />} /> */}
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
           {/* <Route path="/about" element={<About />} /> */}
           {/* <Route path="/videos" element={<Videos />} /> */}
           {/* <Route path="/video/:id" element={<Video />} />  */}
           {/* Checkout using Asterik for pathways and how it affects 404 page */}
-        {/* </Routes> */}
-        {/* <Footer /> */}
+        </Routes>
+        <Footer />
       </Router>
     </div>
   );
