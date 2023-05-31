@@ -1,0 +1,18 @@
+nav {
+    background-color: red;
+    color: black;
+    font-weight: bolder;
+    font-size:larger;
+    display: flex;
+    display: block;
+}
+
+.homeLink {
+    color: white;
+    flex-direction: column;
+}
+
+
+.aboutLink {
+    color: white;
+}
