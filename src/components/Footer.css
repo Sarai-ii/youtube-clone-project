@@ -1,0 +1,51 @@
+.footer {
+    background-color: #212121;
+    color: #ffffff;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .youtube-logo {
+    /* mix-blend-mode: color-burn; */
+    object-fit: contain;
+    width: 100px;
+    aspect-ratio: 16/9;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  }
+  
+  .our-names a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .our-names a:hover {
+    color: #ff0000;
+  }
+  
+  .footer-right {
+    text-align: right;
+  }
+  
+  .footer-text {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  
+  .footer-text:hover {
+    opacity: 1;
+  }
+  
