@@ -17,6 +17,10 @@ export default function Home() {
 
     function handleSubmit(event) {
         event.preventDefault();
+        if (!search.trim()) {
+          setShowModal(true);
+          return;
+        }
         return fetch(
           `https://youtube.googleapis.com/youtube/v3/search?q=${search}&key=${key}&part=snippet&type=video&maxResults=20`
         )
@@ -35,6 +39,7 @@ export default function Home() {
             console.error(error);
           });
       }
+      
       
     return (
         <div>
