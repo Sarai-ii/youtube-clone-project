@@ -1,10 +1,13 @@
-import Videos from "../Videos";
 import { useState } from "react";
+
+// <------Components----->
+import Videos from "../Videos";
 import ModalWindow from "../ModalWindow";
+
 
 const key = process.env.REACT_APP_API_KEY
 
-export default function Home() {
+export default function Search() {
     const [search, setSearch] = useState("")
     const [allVideos, setAllVideos] = useState([])
     const [showModal, setShowModal] = useState(false);
@@ -26,20 +29,21 @@ export default function Home() {
         )
           .then((results) => results.json())
           .then((response) => {
-            setAllVideos(response.items);
-            if (response.items.length === 0) {
-              setShowModal(true);
-            } else {
-              setShowModal(false);
-            }
-            console.log(response.items);
+              if (response.items.length === 0) {
+                  setShowModal(true);
+                } else {
+                    setShowModal(false);
+                    setAllVideos(response.items);
+
+                }
+            console.log(allVideos);
+            // return response.items
           })
           .catch((error) => {
             setShowModal(true);
             console.error(error);
           });
       }
-      
       
     return (
         <div>
@@ -54,9 +58,13 @@ export default function Home() {
               />
               <input className="submit" type="submit" />
             </form>
-          </div>
-      
-          {showModal && <ModalWindow closeModal={() => setShowModal(false)} />}
+        </div>
+
+        <div className="">
+            <Videos videos={allVideos} />
+        </div>
+
+        {showModal && <ModalWindow closeModal={() => setShowModal(false)} />}
         </div>
       );
     }      
