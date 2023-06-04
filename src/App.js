@@ -7,9 +7,9 @@ import Home from "./components/Home"
 import About from "./components/About"
 import Videos from "./components/Videos"
 import Video from "./components/Video"
-import Nav from "./components/Nav"
+import NavBar from "./components/Header/NavBar"
 import Footer from "./components/Footer"
-
+import ModalWindow from "./components/ModalWindow";
 
 
 // Styling 
@@ -21,7 +21,7 @@ function App() {
     <div className="App">
      {/* <p>Working App</p> */}
      <Router>
-        <Nav />
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

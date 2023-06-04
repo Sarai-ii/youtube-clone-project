@@ -14,7 +14,7 @@ This application is being created as part of the requirments for the Pursuit fel
 
 Joanavel, developer
 
-Sarai, project manager
+Sarai, developer and project manager
 
 Jennifer, developer
 
