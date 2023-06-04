@@ -2,7 +2,7 @@
     background-color: #212121;
     color: #ffffff;
     padding: 4px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
   }
@@ -19,7 +19,6 @@
   }
   
   .youtube-logo {
-    /* mix-blend-mode: color-burn; */
     object-fit: contain;
     width: 100px;
     aspect-ratio: 16/9;
@@ -32,7 +31,7 @@
     transition: color 0.3s ease;
     font-size: 13px;
   }
-
+  
   .footer-first-text {
     font-size: 13px;
   }
