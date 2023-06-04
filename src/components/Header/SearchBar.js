@@ -3,7 +3,6 @@ import { useState } from "react";
 // <------Components----->
 import Videos from "../Videos";
 import ModalWindow from "../ModalWindow";
-import Video from '../Video'
 
 // <-----Styling--->
 import "./NavBar.css"
@@ -67,10 +66,7 @@ export default function Search() {
         <div className="">
             <Videos videos={allVideos} />
         </div>
-        <div className='hidden'>
-            <Video videos={allVideos} />
-        </div>
-
+        
         {showModal && <ModalWindow closeModal={() => setShowModal(false)} />}
         </div>
       );

@@ -12,7 +12,7 @@ const Videos = ({videos}) => {
             {
               videos.map((video) => (
               <li key={video.id.videoId} className="video m-1 mt-3 col-3">
-                 <Link to={`/video/:${video.id.videoId}`}>
+                 <Link to={`/video/${video.id.videoId}`}>
                  <img className="card-img mt-3" src={video.snippet.thumbnails.medium.url} alt={video.snippet.title} />
                  <h4 className="card-subtitle text-start m-2">{video.snippet.title}</h4>
                  </Link>
