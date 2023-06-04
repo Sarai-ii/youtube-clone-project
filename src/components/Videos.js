@@ -21,7 +21,6 @@ const Videos = ({videos}) => {
             ))}
           </ul>
         </section>
-        <Video />
     </div>
   );
 }
