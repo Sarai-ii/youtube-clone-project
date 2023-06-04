@@ -25,8 +25,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          {/* <Route path="/videos" element={<Videos />} /> */}
-          {/* <Route path="/video/:id" element={<Video />} />  */}
+          <Route path="/videos" element={<Videos />} />
+          <Route path="/video/:id" element={<Video />} /> 
           {/* Checkout using Asterik for pathways and how it affects 404 page */}
         </Routes>
         <Footer />
