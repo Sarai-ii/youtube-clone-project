@@ -1,28 +1,35 @@
 import { Link } from "react-router-dom";
-// import { Navbar, Nav } from "react-bootstrap";
-//import "../Nav.css"
-import "./NavBar.css"
-import SearchBar from "./SearchBar.js"
+import "./NavBar.css";
+import SearchBar from "./SearchBar.js";
 
 export default function NavBar() {
-    return (
+  return (
     <>
-        <header>
-            <div className='container'>
-                <nav className="navbar navbar-expand-lg navbar-custom">
-                    {/* <div className='YouTube'></div>   */}
-                        <label className='navbar-brand logo' href='#'>YouTube</label>
-                    <SearchBar />
-                    <div className="ml-auto nav-links">
-                            <Link className='homeLink nav-link' to="/">Home</Link>
-                            <Link className='aboutLink link' to="/about">About</Link>
-                    </div>
-                </nav>            
+      <header>
+        <div className="container">
+          <nav className="navbar navbar-expand-lg navbar-custom">
+            <label className="navbar-brand logo" href="#">
+              YouTube
+            </label>
+            <div className="ml-auto nav-links">
+              <Link className="homeLink nav-link" to="/">
+                Home
+              </Link>
+              <Link className="aboutLink link" to="/about">
+                About
+              </Link>
+            </div>
+          </nav>
         </div>
-        </header>
-        </>
-    );
+      </header>
+      <div className="search-bar-container">
+        <SearchBar />
+      </div>
+    </>
+  );
 }
+
+
 
 
 /* ============== NOTES ==================

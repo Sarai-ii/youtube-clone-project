@@ -1,10 +1,10 @@
 import React from 'react'
-import NavBar from './Header/NavBar'
+import SearchBar from "./Header/SearchBar"
 
 const Home = () => {
   return (
     <div>
-      <NavBar />
+      {/* <SearchBar /> */}
     </div>
   )
 }
