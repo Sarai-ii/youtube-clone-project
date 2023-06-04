@@ -6,19 +6,13 @@ export default function NavBar() {
     return (
     <>
         <header>
-            <div className='container fixed-top'>
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <div className='container'>
+                <nav className="navbar navbar-expand-lg navbar-custom">
                     <div className='YouTube'></div>  
-                    <a className='navbar-brand logo' href="/">
                         <label className='navbar-brand logo' href='#'>YouTube</label>
-                    </a>
                     <div className="ml-auto nav-links">
-                        <a className='nav-item link' href="/home">
                             <Link className='homeLink nav-link' to="/">Home</Link>
-                        </a>
-                        <a className='nav-item link' href="/about">
                             <Link className='aboutLink link' to="/about">About</Link>
-                        </a>
                     </div>
                 </nav>            
         </div>
