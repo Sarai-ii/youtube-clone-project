@@ -1,0 +1,7 @@
+In Footer. <div> cannot appear as a descendant of <p>. Change line 11 or 12. 
+
+What is Manifest line 1 column one? There is a syntax error. 
+
+A form field element should have an id or name attribute. 
+
+Why can I not get the header to go all th way across? Why is submit way over where it is?

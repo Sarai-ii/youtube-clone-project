@@ -2,14 +2,45 @@
     display: none;
 }
 
-nav {
+.navbar {
     background-color: red;
     color: black;
     font-weight: bolder;
     font-size:larger;
     display: flex;
     align-items: center;
+    padding: 4px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
+
+
+/* 
+header, nav {
+    background-color: red;
+    color: black;
+    font-weight: bolder;
+    font-size:larger;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+} */
+/* 
+.navbar {
+    background-color: yellow;
+    color: pink;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+} */
+
 
 nav a {
     color: white;
@@ -25,6 +56,15 @@ nav a {
     color: white;
 }
 
+
+.navbar-custom {
+    background-color: red;  
+}  
+  
+.navbar-custom .navbar-brand,  
+.navbar-custom .navbar-text {  
+    color: black;  
+}  
 
 .aboutLink {
     color: white;
