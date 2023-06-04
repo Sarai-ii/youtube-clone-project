@@ -1,75 +1,70 @@
 import { useState } from "react";
-
-// <------Components----->
 import Videos from "../Videos";
 import ModalWindow from "../ModalWindow";
+import "./NavBar.css";
 
-// <-----Styling--->
-import "./NavBar.css"
+const key = process.env.REACT_APP_API_KEY;
 
+export default function SearchBar({ addSearchToHistory }) {
+  const [search, setSearch] = useState("");
+  const [allVideos, setAllVideos] = useState([]);
+  const [searchFailed, setSearchFailed] = useState(false);
 
-const key = process.env.REACT_APP_API_KEY
+  function handleTextChange(event) {
+    setSearch(event.target.value);
+  }
 
-export default function Search() {
-    const [search, setSearch] = useState("")
-    const [allVideos, setAllVideos] = useState([])
-    const [showModal, setShowModal] = useState(false);
-
-
-    function handleTextChange(event) {
-        setSearch(event.target.value)
+  function handleSubmit(event) {
+    event.preventDefault();
+    if (!search.trim()) {
+      return;
     }
-
-    function handleSubmit(event) {
-        event.preventDefault();
-        if (!search.trim()) {
-          setShowModal(true);
-          return;
+    return fetch(
+      `https://youtube.googleapis.com/youtube/v3/search?q=${search}&key=${key}&part=snippet&type=video&maxResults=20`
+    )
+      .then((results) => results.json())
+      .then((response) => {
+        if (response.items.length === 0) {
+          setSearchFailed(true);
+        } else {
+          setSearchFailed(false);
+          setAllVideos(response.items);
+          addSearchToHistory(search); // Add search to history
         }
-        return fetch(
-          `https://youtube.googleapis.com/youtube/v3/search?q=${search}&key=${key}&part=snippet&type=video&maxResults=20`
-        )
-          .then((results) => results.json())
-          .then((response) => {
-              if (response.items.length === 0) {
-                  setShowModal(true);
-                } else {
-                    setShowModal(false);
-                    setAllVideos(response.items);
-                }
-            console.log(allVideos);
-            // return response.items
-          })
-          .catch((error) => {
-            setShowModal(true);
-            console.error(error);
-          });
-      }
-      
-    return (
-        <div>
-          <div className="search-button">
-            <form onSubmit={handleSubmit}>
-              <input
-                className="search-bar"
-                type="text"
-                value={search}
-                id="search"
-                onChange={handleTextChange}
-              />
-              <input className="submit" type="submit" />
-            </form>
-          </div>
+        console.log(allVideos);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
 
-          <div className="">
-              <Videos videos={allVideos} />
-          </div>
-        
-          {showModal && <ModalWindow closeModal={() => setShowModal(false)} />}
-        </div>
-      );
-    }      
- 
+  return (
+    <div>
+      <div className="search-button">
+        <form onSubmit={handleSubmit}>
+          <input
+            className="search-bar"
+            type="text"
+            value={search}
+            id="search"
+            onChange={handleTextChange}
+          />
+          <input className="submit" type="submit" />
+        </form>
+      </div>
+
+      <div className="">
+        <Videos videos={allVideos} />
+      </div>
+
+      {searchFailed && (
+        <ModalWindow closeModal={() => setSearchFailed(false)} />
+      )}
+    </div>
+  );
+}
+
+
 
 // Original fetch: 
 // `https://youtube.googleapis.com/youtube/v3/search?key=${key}&q=${search}&part=snippet&maxResults=9&type=video`

@@ -23,7 +23,7 @@ export default function NavBar() {
         </div>
       </header>
       <div className="search-bar-container">
-        <SearchBar />
+        {/* <SearchBar /> */}
       </div>
     </>
   );
