@@ -10,7 +10,7 @@ export default function Video({ videos }) {
     console.log(videos);
     event.target.playVideo();
   };
-// customUrl
+
   const opts = {
     height: '500',
     width: '640',
