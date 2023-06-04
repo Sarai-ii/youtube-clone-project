@@ -1,36 +1,39 @@
 import React, {useState} from 'react'
 import { useParams } from 'react-router-dom'
 
-const Comments = () => {
+export default function Comments () {
     const {id} = useParams()
 
     const [comments, setComments] = useState([])
-    const [comment, setComment]=useState({
+    const [comment, setComment] = useState({
         name:"",
         comment:""
     })
 
-    const handleTextChange = (e) => {
-        setComment({...comment, [e.target.id]:e.target.value})
+    const handleTextChange = (event) => {
+        setComment({...comment, [event.target.id]:event.target.value})
     }
 
-    const handleComment = (e) => {
-        e.preventDefault()
+    const handleComment = (event) => {
+        event.preventDefault()
         setComments([...comments, comment])
         setComment({name: "",comment: ""})
     }
 
   return (
     <div>
-      <div className='video__comments'>
-                <h4>Add a comment</h4>
+      <div className=''>
+                <h4>Add a comment....</h4>
+
                 <form onSubmit={handleComment}>
+
                     <label htmlFor='name'>Name: </label>
+
                     <input 
                         type="text"
-                        id="name"
                         onChange={handleTextChange}
                     />
+        
                     <br></br>
                     <label htmlFor='comment'>Comment: </label>
                     <input 
@@ -38,15 +41,16 @@ const Comments = () => {
                         id="comment"
                         onChange={handleTextChange}
                     />
+
                     <br></br>
                     <input type="submit"></input>
                 </form>
                 <hr></hr>
                 <ul>
-                    {comments.map((element) => {
+                    {comments.map((com) => {
                         return (
                             <li key={id}>
-                                {element.name}: {element.comment}
+                                {com.name}: {com.comment}
                             </li>
                         )
                     })}
@@ -55,5 +59,3 @@ const Comments = () => {
     </div>
   )
 }
-
-export default Comments
