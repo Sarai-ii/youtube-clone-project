@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 // import { Navbar, Nav } from "react-bootstrap";
-import "../Nav.css"
+//import "../Nav.css"
+import "./NavBar.css"
+import SearchBar from "./SearchBar.js"
 
 export default function NavBar() {
     return (
@@ -8,8 +10,9 @@ export default function NavBar() {
         <header>
             <div className='container'>
                 <nav className="navbar navbar-expand-lg navbar-custom">
-                    <div className='YouTube'></div>  
+                    {/* <div className='YouTube'></div>   */}
                         <label className='navbar-brand logo' href='#'>YouTube</label>
+                    <SearchBar />
                     <div className="ml-auto nav-links">
                             <Link className='homeLink nav-link' to="/">Home</Link>
                             <Link className='aboutLink link' to="/about">About</Link>
