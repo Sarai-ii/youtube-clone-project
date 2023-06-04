@@ -76,3 +76,25 @@ ul {
     padding: 0;
 }
 /* The ul styling is so there is no accidentally added styling. */
+
+
+
+/* Some search bar styling */
+
+
+.navbar + .search-bar-container {
+    margin-top: 60px; /* Adjust the margin-top value as needed */
+  }
+
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px; /* Adjust the margin-top value as needed */
+  }
+  
+.search-bar {
+    width: 400px;
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
+  }
