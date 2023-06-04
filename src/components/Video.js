@@ -2,12 +2,13 @@ import React from 'react'
 import { useParams } from 'react-router-dom';
 import YouTube from 'react-youtube'
 
+
 export default function Video ({videos}) {
   const { id } = useParams();
 
   const onReady = (event => {
     // access to player in all event handlers via event.target
-    console.log(id)
+    console.log(videos)
     event.target.getPlayerMode();
     // event.target.pauseVideo();
   })
@@ -23,7 +24,6 @@ export default function Video ({videos}) {
   return(
     <div className='container'>
       {
-        console.log(videos)
         /*
         I CAN'T USE MAP AND THE VIDEOS PARAM IS NOT PASSING DOWN TO VIDEO W/O SHOWING THE CONTENTS OF VIDEO ON VIDEOS
         1. SHOULD I SWITCH THE CONTENTS OF EACH COMPONENT
@@ -40,7 +40,7 @@ export default function Video ({videos}) {
       }
       <div>
         <YouTube videoId={id} onReady={onReady} opts={opts}/>
-        {/* <h2>{videos.snippet.title}</h2>s */}
+        {/* <h2>{videos.snippet.title}</h2> */}
         {/* <iframe title={`YouTube video player for ${videos.snippet.title}`} width="560" height="315" src={`https://www.youtube.com/embed/${videos.id}`} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> */}
       </div>
     </div>

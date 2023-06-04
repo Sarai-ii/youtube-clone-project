@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Video from './Video'
 
 // <-----Styling-----> 
 import './Videos.css'
@@ -20,6 +19,8 @@ const Videos = ({videos}) => {
               </li>
             ))}
           </ul>
+          <div className='hidden'>
+          </div>
         </section>
     </div>
   );
