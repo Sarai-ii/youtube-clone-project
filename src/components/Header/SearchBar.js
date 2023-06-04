@@ -17,6 +17,7 @@ export default function SearchBar({ addSearchToHistory }) {
   function handleSubmit(event) {
     event.preventDefault();
     if (!search.trim()) {
+      setSearchFailed(true);
       return;
     }
     return fetch(
@@ -63,6 +64,7 @@ export default function SearchBar({ addSearchToHistory }) {
     </div>
   );
 }
+
 
 
 
