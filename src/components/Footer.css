@@ -1,7 +1,7 @@
 .footer {
     background-color: #212121;
     color: #ffffff;
-    padding: 20px;
+    padding: 4px;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -23,13 +23,18 @@
     object-fit: contain;
     width: 100px;
     aspect-ratio: 16/9;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
   }
   
   .our-names a {
     color: #ffffff;
     text-decoration: none;
     transition: color 0.3s ease;
+    font-size: 13px;
+  }
+
+  .footer-first-text {
+    font-size: 13px;
   }
   
   .our-names a:hover {
@@ -41,7 +46,7 @@
   }
   
   .footer-text {
-    font-size: 14px;
+    font-size: 12px;
     opacity: 0.8;
   }
   
