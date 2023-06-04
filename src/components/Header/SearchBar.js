@@ -14,7 +14,6 @@ export default function Search() {
     const [search, setSearch] = useState("")
     const [allVideos, setAllVideos] = useState([])
     const [showModal, setShowModal] = useState(false);
-    // const [modal, setModal] = useState(true)
 
 
     function handleTextChange(event) {
@@ -37,7 +36,6 @@ export default function Search() {
                 } else {
                     setShowModal(false);
                     setAllVideos(response.items);
-
                 }
             console.log(allVideos);
             // return response.items
@@ -61,13 +59,13 @@ export default function Search() {
               />
               <input className="submit" type="submit" />
             </form>
-        </div>
+          </div>
 
-        <div className="">
-            <Videos videos={allVideos} />
-        </div>
+          <div className="">
+              <Videos videos={allVideos} />
+          </div>
         
-        {showModal && <ModalWindow closeModal={() => setShowModal(false)} />}
+          {showModal && <ModalWindow closeModal={() => setShowModal(false)} />}
         </div>
       );
     }      
