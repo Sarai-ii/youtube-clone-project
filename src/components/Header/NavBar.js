@@ -1,24 +1,21 @@
 import { Link } from "react-router-dom";
 // import { Navbar, Nav } from "react-bootstrap";
-import "../Nav.css"
+//import "../Nav.css"
+import "./NavBar.css"
+import SearchBar from "./SearchBar.js"
 
 export default function NavBar() {
     return (
     <>
         <header>
-            <div className='container fixed-top'>
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <div className='YouTube'></div>  
-                    <a className='navbar-brand logo' href="/">
+            <div className='container'>
+                <nav className="navbar navbar-expand-lg navbar-custom">
+                    {/* <div className='YouTube'></div>   */}
                         <label className='navbar-brand logo' href='#'>YouTube</label>
-                    </a>
+                    <SearchBar />
                     <div className="ml-auto nav-links">
-                        <a className='nav-item link' href="/home">
                             <Link className='homeLink nav-link' to="/">Home</Link>
-                        </a>
-                        <a className='nav-item link' href="/about">
                             <Link className='aboutLink link' to="/about">About</Link>
-                        </a>
                     </div>
                 </nav>            
         </div>
