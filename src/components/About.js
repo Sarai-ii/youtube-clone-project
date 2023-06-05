@@ -20,7 +20,14 @@ function About() {
 <span className="developer">Joanavel Pascual</span>
 (https://github.com/JoanavelPascual7)
 <p>Joanavel Pascual is a web developer with a passion for social impact. With a background in social work, he is based in New York City. </p>
+<br/>
+<h6>Credits</h6>
+<ul>
+  <li><a href="https://www.freepnglogos.com/pics/youtube-logo-png">Header Youtube Logo from freepnglogos.com</a></li>
+</ul>
 </>
+
+
   )
 }
 
