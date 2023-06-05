@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import "./NavBar.css";
+// import "../Logo_of_YouTube_2015-2017.svg.png"
+// import { NavBar} from "react-bootstrap";
 import SearchBar from "./SearchBar.js";
 
 export default function NavBar() {

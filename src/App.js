@@ -33,7 +33,7 @@ function App() {
             <Route path="/*" element={<Home />} /> {/* This will catch anything else that accidentally gets typed in and bring people home. */}
           </Routes>
         </div>
-        <div className="move-search-bar-home hidden">
+        <div className="">
           <SearchBar addSearchToHistory={addSearchToHistory} /> {/* Pass addSearchToHistory as prop */}
         </div>
 
