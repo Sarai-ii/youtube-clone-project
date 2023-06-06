@@ -1,32 +1,79 @@
 /* SideBar.css */
+
 .sidebar {
-    background-color: #f8f8f8;
-    padding: 10px;
-  }
-  
-  .sidebar h2 {
-    color: #ff0000;
-    font-size: 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar-toggle {
+    position: absolute;
+    top: 10px;
+    right: -40px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+}
+
+.sidebar-toggle::before {
+    content: "\f0c9";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 20px;
+    color: #555;
+}
+
+.sidebar-content {
+    padding: 20px;
+}
+
+.sidebar h2 {
     margin-bottom: 10px;
-  }
-  
-  .sidebar ul {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+}
+
+.sidebar ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-  }
-  
-  .sidebar li {
+}
+
+.sidebar li {
     margin-bottom: 5px;
-    padding: 5px;
-    background-color: #ffffff;
-  }
-  
-  .sidebar li:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .sidebar li:first-child {
-    font-weight: bold;
-  }
-  
+    font-size: 14px;
+    color: #777;
+}
+
+.sidebar li::before {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 5px;
+    color: #f00;
+}
+
+.sidebar li:hover {
+    color: #f00;
+    cursor: pointer;
+}

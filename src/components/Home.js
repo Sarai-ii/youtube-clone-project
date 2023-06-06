@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import SearchBar from "./Header/SearchBar";
 import SideBar from './SideBar';
 
+
 const Home = () => {
   const [searchHistory, setSearchHistory] = useState([]);
 
