@@ -2,6 +2,7 @@ import { useState } from "react";
 import Videos from "../Videos";
 import ModalWindow from "../ModalWindow";
 import "./NavBar.css";
+import "./SearchBar.css"
 
 const key = process.env.REACT_APP_API_KEY;
 
@@ -39,32 +40,34 @@ export default function SearchBar({ addSearchToHistory }) {
       });
   }
 
-  return (
-    <div>
-      <div className="search-button">
-        <form onSubmit={handleSubmit}>
-          <input
-            className="search-bar"
-            type="text"
-            value={search}
-            id="search"
-            onChange={handleTextChange}
-          />
-          <input className="submit" type="submit" />
-        </form>
-      </div>
-
-      <div className="">
-        <Videos videos={allVideos} />
-      </div>
-
-      {searchFailed && (
-        <ModalWindow closeModal={() => setSearchFailed(false)} />
-      )}
+ return (
+  <div className="search-page">
+    <div className="searchbar-container">
+      <form className="search-form" onSubmit={handleSubmit}>
+        <input
+          className="search-input"
+          type="text"
+          value={search}
+          id="search"
+          onChange={handleTextChange}
+          placeholder="Search..."
+        />
+        <button className="search-button" type="submit">
+          Search
+        </button>
+      </form>
     </div>
-  );
-}
 
+    <div className="video-container">
+      <Videos videos={allVideos} />
+    </div>
+
+    {searchFailed && (
+      <ModalWindow closeModal={() => setSearchFailed(false)} />
+    )}
+  </div>
+);
+    }
 
 
 

@@ -24,16 +24,16 @@ function App() {
     <div className="App">
       <Router>
         <NavBar />
-        <div className="content-wrapper">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/videos" element={<Videos />} />
-            <Route path="/video/:id" element={<Video />} />
-          </Routes>
-        </div>
-        <SearchBar addSearchToHistory={addSearchToHistory} /> {/* Pass addSearchToHistory as prop */}
-        <SideBar searchHistory={searchHistory} /> {/* Pass searchHistory as prop */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/videos" element={<Videos />} />
+          <Route path="/video/:id" element={<Video />} />
+        </Routes>
+        <SearchBar className="searchbar" addSearchToHistory={addSearchToHistory} />{" "}
+        {/* Pass addSearchToHistory as prop */}
+        <SideBar className="sidebar" searchHistory={searchHistory} />{" "}
+        {/* Pass searchHistory as prop */}
         <Footer />
       </Router>
     </div>
@@ -41,4 +41,3 @@ function App() {
 }
 
 export default App;
-
