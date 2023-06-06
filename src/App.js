@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
 import Home from "./components/Home";
 import About from "./components/About";
 import Videos from "./components/Videos";
@@ -10,7 +9,6 @@ import Footer from "./components/Footer";
 import ModalWindow from "./components/ModalWindow";
 import SideBar from "./components/SideBar";
 import SearchBar from "./components/Header/SearchBar";
-
 import "./App.css";
 
 function App() {
@@ -25,7 +23,7 @@ function App() {
       <Router>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home addSearchToHistory={addSearchToHistory} />} />
           <Route path="/about" element={<About />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/video/:id" element={<Video />} />
