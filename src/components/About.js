@@ -15,9 +15,19 @@ function About() {
 <a href="https://github.com/fintheehuman" className="developer">Finesse Poole</a>
 <p>With a background in science, Finesse uses his experience in customer service and leadership to make the web a more usable place for everyone.</p>
 <br/>
-<a href="https://github.com/JoanavelPascual7" className="developer">Joanavel Pascual</a>
-<p>Joanavel Pascual is a web developer with a passion for social impact. Based in New York City, he has a background in social work. </p>
+
+<span className="developer">Joanavel Pascual</span>
+(https://github.com/JoanavelPascual7)
+<p>Joanavel Pascual is a web developer with a passion for social impact. With a background in social work, he is based in New York City. </p>
+<br/>
+<h6>Credits</h6>
+<ul>
+  <li><a href="https://www.freepnglogos.com/pics/youtube-logo-png">Header Youtube Logo from freepnglogos.com</a></li>
+</ul>
+
 </>
+
+
   )
 }
 
