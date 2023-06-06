@@ -30,8 +30,6 @@ function App() {
           <Route path="/videos" element={<Videos />} />
           <Route path="/video/:id" element={<Video />} />
         </Routes>
-        <SearchBar className="searchbar" addSearchToHistory={addSearchToHistory} />{" "}
-        {/* Pass addSearchToHistory as prop */}
         <SideBar className="sidebar" searchHistory={searchHistory} />{" "}
         {/* Pass searchHistory as prop */}
         <Footer />

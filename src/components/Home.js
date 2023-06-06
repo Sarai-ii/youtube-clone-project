@@ -4,7 +4,8 @@ import SearchBar from "./Header/SearchBar"
 const Home = () => {
   return (
     <div>
-      {/* <SearchBar /> */}
+              <SearchBar className="searchbar" />{" "}
+        {/* Pass addSearchToHistory as prop */}
     </div>
   )
 }
