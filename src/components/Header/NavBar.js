@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import "./NavBar.css";
-import YouTubeLogo2 from "../../assets/Logo_of_YouTube_2015-2017.svg.png"
-// import YouTubeLogo from "/Users/einsteiniumpursuit/pursuit/9-6/youtube-clone-project/src/assets/YouTube-Logo.png"
 import YouTubeLogoSplash from "../../assets/youtube-logo-png-2077.png"
+//import YouTubeLogo2 from "../../assets/Logo_of_YouTube_2015-2017.svg.png"
+// import YouTubeLogo from "/Users/einsteiniumpursuit/pursuit/9-6/youtube-clone-project/src/assets/YouTube-Logo.png"
+
 // import { NavBar} from "react-bootstrap";
-import SearchBar from "./SearchBar.js";
+//import SearchBar from "./SearchBar.js";
 
 export default function NavBar() {
   return (
