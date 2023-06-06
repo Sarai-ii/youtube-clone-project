@@ -30,7 +30,6 @@ function App() {
         </Routes>
         <SideBar className="sidebar" searchHistory={searchHistory} />{" "}
         {/* Pass searchHistory as prop */}
-
         <Footer />
       </Router>
     </div>
