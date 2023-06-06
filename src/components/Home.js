@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SearchBar from "./Header/SearchBar";
+import SideBar from './SideBar';
 
-const Home = ({ addSearchToHistory }) => {
+const Home = () => {
+  const [searchHistory, setSearchHistory] = useState([]);
+
+  const addSearchToHistory = (search) => {
+    setSearchHistory((prevHistory) => [...prevHistory, search]);
+  };
+
   return (
     <div>
-      <SearchBar className="searchbar" addSearchToHistory={addSearchToHistory} />{" "}
-      {/* Pass addSearchToHistory as prop */}
+      <SearchBar addSearchToHistory={addSearchToHistory} />
+      <SideBar searchHistory={searchHistory} />
     </div>
   );
 }
