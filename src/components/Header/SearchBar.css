@@ -1,56 +1,37 @@
-.search-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding-top: 20px;
-    background-color: white;
-    font-family: Arial, sans-serif;
-  }
-  
-  .searchbar-container {
-    margin-bottom: 20px;
-  }
-  
-  .search-form {
+.search-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-bottom: 20px; /* Adjust the margin as needed */
   }
   
-  .search-input {
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
-    margin-right: 10px;
-    font-size: 16px;
-    background-color: #f2f2f2;
+  .search-bar {
     width: 450px; /* Adjust the width as needed */
-  }
-  
-  
-  .search-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background-color: #ff0000;
-    color: white;
-    cursor: pointer;
+    height: 40px; /* Adjust the height as needed */
+    padding: 5px 10px;
     font-size: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-  }
-
-  .search-button:hover {
-    background-color: #cc0000; /* Darker red color on hover */
-  }
-  
-  .search-button:active {
-    background-color: #990000; /* Even darker red color when clicked */
+    border: none;
+    border-radius: 20px; /* Adjust the border-radius for more rounded ends */
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #f2f2f2; /* Set the background color to light grey */
   }
   
-  .video-container {
-    /* Add styles for the video container */
+  .submit-button {
+    padding: 8px 16px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 20px; /* Adjust the border-radius for more rounded ends */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #cc0000;
+  }
+  
+  .submit-button:active {
+    background-color: #990000;
+    transform: translateY(1px);
   }
   

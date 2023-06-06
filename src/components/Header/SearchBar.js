@@ -43,22 +43,20 @@ export default function SearchBar({ addSearchToHistory }) {
 
   return (
     <div>
-      <div className="search-button">
-        <form onSubmit={handleSubmit}>
-          <label for="search">
-            <input
-              className="search-bar"
-              type="text"
-              value={search}
-              id="search"
-              onChange={handleTextChange}
-            />
-          </label>
-          <label for="submit">
-            <input className="submit" type="submit" id="submit" />
-          </label>
-        </form>
-      </div>
+     <div className="search-container">
+  <form onSubmit={handleSubmit}>
+    <input
+      className="search-bar"
+      type="text"
+      value={search}
+      id="search"
+      onChange={handleTextChange}
+      placeholder="Search..."
+    />
+    <button className="submit-button" type="submit">Search</button>
+  </form>
+</div>
+
 
       <div className="">
         <Videos videos={allVideos} />
