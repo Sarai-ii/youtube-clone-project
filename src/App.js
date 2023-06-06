@@ -30,9 +30,13 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/videos" element={<Videos />} />
             <Route path="/video/:id" element={<Video />} />
+            <Route path="/*" element={<Home />} /> {/* This will catch anything else that accidentally gets typed in and bring people home. */}
           </Routes>
         </div>
-        <SearchBar addSearchToHistory={addSearchToHistory} /> {/* Pass addSearchToHistory as prop */}
+        <div className="">
+          <SearchBar addSearchToHistory={addSearchToHistory} /> {/* Pass addSearchToHistory as prop */}
+        </div>
+
         <SideBar searchHistory={searchHistory} /> {/* Pass searchHistory as prop */}
         <Footer />
       </Router>

@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
 import "./NavBar.css";
-import SearchBar from "./SearchBar.js";
+import YouTubeLogoSplash from "../../assets/youtube-logo-png-2077.png"
+//import YouTubeLogo2 from "../../assets/Logo_of_YouTube_2015-2017.svg.png"
+// import YouTubeLogo from "/Users/einsteiniumpursuit/pursuit/9-6/youtube-clone-project/src/assets/YouTube-Logo.png"
+
+// import { NavBar} from "react-bootstrap";
+//import SearchBar from "./SearchBar.js";
 
 export default function NavBar() {
   return (
@@ -8,9 +13,12 @@ export default function NavBar() {
       <header>
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-custom">
-            <label className="navbar-brand logo" href="#">
-              YouTube
-            </label>
+            
+            <Link className="navbar-brand logo" href="#">
+              {/* YouTube
+              <img src={YouTubeLogo2} alt="older YouTube logo" className="d-inline-block align-middle mr-2 youtube-logo" /> */}
+              <img src={YouTubeLogoSplash} alt="YouTube logo" className="d-inline-block align-middle mr-2 youtube-logo" />
+            </Link>
             <div className="ml-auto nav-links">
               <Link className="homeLink nav-link" to="/">
                 Home

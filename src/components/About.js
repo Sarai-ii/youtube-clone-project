@@ -5,6 +5,7 @@ function About() {
   return (
     <>
 
+
 <div className="container-fluid p-5">
   <div>
   <h4 className="display-6">About This Project</h4>
@@ -31,7 +32,14 @@ function About() {
   <p>Joanavel Pascual is a web developer with a passion for social impact. Based in New York City, he has a background in social work. </p>
 </div>
 </div>
+<br/>
+<h6>Credits</h6>
+<ul>
+  <li><a href="https://www.freepnglogos.com/pics/youtube-logo-png">Header Youtube Logo from freepnglogos.com</a></li>
+</ul>
 </>
+
+
   )
 }
 
