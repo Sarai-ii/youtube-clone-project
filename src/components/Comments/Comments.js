@@ -23,18 +23,19 @@ export default function Comments() {
 
   const handleComment = (event) => {
     event.preventDefault();
-    
-    if (editComment !== -1){
-    let updatedComments = [...comments]
-    updatedComments[editComment] = comment
-    setComment(updatedComments);
-    setEditComment(-1)
-  }else{
-   let updatedComments = [...comments, comment] 
-    setComments(updatedComments);
-  }
-  setCommentCount(comments.length)
-  setComment({name: '', comment: ''})
+    if (comments.length){
+      if (editComment !== -1){
+      let updatedComments = [...comments]
+      updatedComments[editComment] = comment
+      setComment(updatedComments);
+      setEditComment(-1)
+      }else{
+      let updatedComments = [...comments, comment] 
+        setComments(updatedComments);
+      }
+      setCommentCount(comments.length)
+      setComment({name: '', comment: ''})
+    }
   }
   const handleDelete = (index) => {
     let updatedComments = [...comments];
@@ -48,7 +49,7 @@ export default function Comments() {
     setComment(comments[index])
   })
   return (
-    <div className='container'>
+    <div className=''>
       <div className='row'>
         <div>
           Total comments: {commentCount}
@@ -56,14 +57,15 @@ export default function Comments() {
           <hr/>
         </div>
 
-        <form className="col-4" onSubmit={handleComment}>
+        <form className="" onSubmit={handleComment}>
           <label htmlFor='name'>Name: </label>
           <input type='text' id='name' value={comment.name} onChange={handleTextChange} />
           
           <label htmlFor='comment'>Comment: </label>
           <input type='text' id='comment' value={comment.comment} onChange={handleTextChange} />
           
-          <input className="comment-button btn btn-primary" type='submit' value={editComment !== -1 ? 'Update Comment' : 'Comment'} />
+          <input className="row justify-content-right comment-button btn btn-outline-secondary-active" 
+          type='submit' value={editComment !== -1 ? 'Update Comment' : 'Comment'} />
         </form>
         <hr />
         <ul>
