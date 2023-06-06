@@ -1,14 +1,11 @@
-import React from 'react'
-import SearchBar from "./Header/SearchBar"
-// import addSearchToHistory from '../App'
-
+import React from 'react';
+import SearchBar from "./Header/SearchBar";
 
 const Home = ({ addSearchToHistory }) => {
   return (
     <div>
-
-      {/* <SearchBar addSearchToHistory={addSearchToHistory} /> */}
-
+      <SearchBar className="searchbar" addSearchToHistory={addSearchToHistory} />{" "}
+      {/* Pass addSearchToHistory as prop */}
     </div>
   );
 }
