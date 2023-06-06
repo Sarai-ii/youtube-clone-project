@@ -2,6 +2,7 @@ import { useState } from "react";
 import Videos from "../Videos";
 import ModalWindow from "../ModalWindow";
 import "./NavBar.css";
+import "./SearchBar.css"
 
 const key = process.env.REACT_APP_API_KEY;
 
@@ -39,6 +40,7 @@ export default function SearchBar({ addSearchToHistory }) {
       });
   }
 
+
   return (
     <div>
       <div className="search-button">
@@ -62,18 +64,14 @@ export default function SearchBar({ addSearchToHistory }) {
         <Videos videos={allVideos} />
       </div>
 
-      {searchFailed && (
-        <ModalWindow closeModal={() => setSearchFailed(false)} />
-      )}
+
+    <div className="video-container">
+      <Videos videos={allVideos} />
     </div>
-  );
-}
 
-
-
-
-// Original fetch: 
-// `https://youtube.googleapis.com/youtube/v3/search?key=${key}&q=${search}&part=snippet&maxResults=9&type=video`
-
-// John's Fetch
-// `https://youtube.googleapis.com/youtube/v3/search?q=${search}&key=${key}&part=snippet&type=video&maxResults=20`
+    {searchFailed && (
+      <ModalWindow closeModal={() => setSearchFailed(false)} />
+    )}
+  </div>
+);
+    }
