@@ -40,23 +40,30 @@ export default function SearchBar({ addSearchToHistory }) {
       });
   }
 
- return (
-  <div className="search-page">
-    <div className="searchbar-container">
-      <form className="search-form" onSubmit={handleSubmit}>
-        <input
-          className="search-input"
-          type="text"
-          value={search}
-          id="search"
-          onChange={handleTextChange}
-          placeholder="Search..."
-        />
-        <button className="search-button" type="submit">
-          Search
-        </button>
-      </form>
-    </div>
+
+  return (
+    <div>
+      <div className="search-button">
+        <form onSubmit={handleSubmit}>
+          <label for="search">
+            <input
+              className="search-bar"
+              type="text"
+              value={search}
+              id="search"
+              onChange={handleTextChange}
+            />
+          </label>
+          <label for="submit">
+            <input className="submit" type="submit" id="submit" />
+          </label>
+        </form>
+      </div>
+
+      <div className="">
+        <Videos videos={allVideos} />
+      </div>
+
 
     <div className="video-container">
       <Videos videos={allVideos} />
@@ -68,11 +75,3 @@ export default function SearchBar({ addSearchToHistory }) {
   </div>
 );
     }
-
-
-
-// Original fetch: 
-// `https://youtube.googleapis.com/youtube/v3/search?key=${key}&q=${search}&part=snippet&maxResults=9&type=video`
-
-// John's Fetch
-// `https://youtube.googleapis.com/youtube/v3/search?q=${search}&key=${key}&part=snippet&type=video&maxResults=20`
