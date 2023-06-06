@@ -71,11 +71,7 @@
   }
   
   .sidebar li::before {
-    content: "\f054";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 5px;
-    color: #f00;
+    content: none; /* Remove the bullet point */
   }
   
   .sidebar li:hover {
@@ -83,3 +79,20 @@
     cursor: pointer;
   }
   
+  .sidebar-divider {
+    margin: 10px 0; /* Add margin to create space */
+    border-bottom: 1px solid #ccc; /* Add the divider */
+  }
+  
+  .sidebar-links li {
+    margin-bottom: 5px;
+  }
+  
+  .sidebar-links a {
+    color: #777;
+    text-decoration: none;
+  }
+  
+  .sidebar-links a:hover {
+    color: #f00;
+  }
