@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import YouTube from 'react-youtube';
 
 // <------Components------>
-import Comments from './Comments';
+import Comments from './Comments/Comments';
 
 export default function Video() {
   const { id, videos } = useParams();
