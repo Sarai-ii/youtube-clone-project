@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
 import Home from "./components/Home";
 import About from "./components/About";
 import Videos from "./components/Videos";
@@ -10,7 +9,6 @@ import Footer from "./components/Footer";
 import ModalWindow from "./components/ModalWindow";
 import SideBar from "./components/SideBar";
 import SearchBar from "./components/Header/SearchBar";
-
 import "./App.css";
 
 function App() {
@@ -24,20 +22,15 @@ function App() {
     <div className="App">
       <Router>
         <NavBar />
-        <div className="content-wrapper">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/videos" element={<Videos />} />
-            <Route path="/video/:id" element={<Video />} />
-            <Route path="/*" element={<Home />} /> {/* This will catch anything else that accidentally gets typed in and bring people home. */}
-          </Routes>
-        </div>
-        <div className="">
-          <SearchBar addSearchToHistory={addSearchToHistory} /> {/* Pass addSearchToHistory as prop */}
-        </div>
+        <Routes>
+          <Route path="/" element={<Home addSearchToHistory={addSearchToHistory} />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/videos" element={<Videos />} />
+          <Route path="/video/:id" element={<Video />} />
+        </Routes>
+        <SideBar className="sidebar" searchHistory={searchHistory} />{" "}
+        {/* Pass searchHistory as prop */}
 
-        <SideBar searchHistory={searchHistory} /> {/* Pass searchHistory as prop */}
         <Footer />
       </Router>
     </div>
@@ -45,4 +38,3 @@ function App() {
 }
 
 export default App;
-

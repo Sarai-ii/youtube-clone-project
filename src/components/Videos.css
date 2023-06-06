@@ -10,9 +10,11 @@ li {
     display: flex;
     justify-content: center;
     padding: 20px;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
+    /* margin-left: 50px;  Adjust the margin value to move it to the right  */
   }
+  
   
   .col {
     display: flex;
