@@ -2,3 +2,8 @@
     font-size: inherit;
     text-align:justify;
 }
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+}

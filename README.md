@@ -23,13 +23,13 @@ Finesse, developer
 ## Technologies Used
 
 * React
+* YouTube API
 * React Router
 * Bootstrap React
 * YouTube React
 * Netlify (probably)
-* YouTube API
 >
-### Overall requirements (to be redone)
+<!-- ### Overall requirements (to be redone)
 >
 * Create a GitHub repository and upload your code to it.
 * Your GitHub repository should have a readme.md file with setup instructions for your application.
@@ -41,9 +41,9 @@ Finesse, developer
 * Landing page
 * About page
 * 404 modal window
-* and more
+* and more -->
 >
-### Back-end requirements (to be completed)
+<!-- ### Back-end requirements (to be completed)
 >
 * 404 modal window
 * YouTube API
@@ -68,7 +68,7 @@ Guideslines from Apple.
 How to Write an Awesome Readme, by Suraj Vishwakarma
 TBD
 TBD
-TBD
+TBD -->
 
 ```mermaid
 journey
