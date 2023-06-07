@@ -7,12 +7,9 @@ import Video from "./components/Video";
 import NavBar from "./components/Header/NavBar";
 import Footer from "./components/Footer";
 
-
 import "./App.css";
 
 function App() {
-
-
   return (
     <div className="App">
       <Router>
@@ -23,7 +20,7 @@ function App() {
           <Route path="/videos" element={<Videos />} />
           <Route path="/video/:id" element={<Video />} />
         </Routes>
-        <Footer />
+        <Footer className="footer" />
       </Router>
     </div>
   );
