@@ -94,3 +94,21 @@
 .sidebar-links a:hover {
   color: #f00;
 }
+
+/* Responsive Styles */
+
+@media (max-width: 767px) {
+  .sidebar {
+    width: 100%;
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-toggle {
+    right: 10px;
+  }
+}
+
