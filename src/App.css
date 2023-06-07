@@ -40,30 +40,37 @@
 
 
 
-/* App.css */
 .App {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  min-height: 100vh; 
   text-align: center;
+  position: relative; 
 }
+
 
 .searchbar {
   display: flex;
   justify-content: center;
-  /* Add any additional styles for the searchbar */
+  
 }
 
 .sidebar {
   position: fixed;
-  top: 8.4%; /* Adjust the percentage as needed */
+  top: 8.4%; 
   left: 0;
   bottom: 0;
-  width: 200px; /* Adjust the width as needed */
-  background-color: #f8f8f8; /* Apply desired background color */
-  /* Add any additional styles for the sidebar */
+  width: 200px; 
+  background-color: #f8f8f8; 
+
 }
 
-
+.footer {
+  background-color: #212121;
+  color: #ffffff;
+  padding: 4px;
+  position: absolute; 
+  bottom: 0;
+  width: 100%;
+}
 
