@@ -6,7 +6,7 @@ import YouTube from 'react-youtube';
 import Comments from './Comments/Comments';
 
 export default function Video() {
-  const { id, videos } = useParams();
+  const { id } = useParams();
 
   const onReady = (event) => {
     // access to player in all event handlers via event.target
