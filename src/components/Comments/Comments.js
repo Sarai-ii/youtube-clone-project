@@ -57,7 +57,7 @@ export default function Comments() {
     <div className=''>
       <div className=''>
         <div className=''>
-          Total comments: {commentCount}
+        {commentCount} Comments
           <h4>Add a comment....</h4>
           <hr />
         </div>
