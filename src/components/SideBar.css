@@ -1,98 +1,96 @@
-/* SideBar.css */
-
 .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 250px;
-    background-color: #fff;
-    transition: transform 0.3s ease;
-    transform: translateX(-100%);
-    z-index: 1000;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    font-family: Arial, sans-serif;
-  }
-  
-  .sidebar.open {
-    transform: translateX(0);
-  }
-  
-  .sidebar-toggle {
-    position: absolute;
-    top: 10px;
-    right: -40px;
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1100;
-  }
-  
-  .sidebar-toggle::before {
-    content: "\f0c9";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 20px;
-    color: #555;
-    transition: color 0.3s ease;
-  }
-  
-  .sidebar-toggle:hover::before {
-    color: #f00;
-  }
-  
-  .sidebar-content {
-    padding: 20px;
-  }
-  
-  .sidebar h2 {
-    margin-bottom: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #555;
-  }
-  
-  .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .sidebar li {
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #777;
-  }
-  
-  .sidebar li::before {
-    content: none; /* Remove the bullet point */
-  }
-  
-  .sidebar li:hover {
-    color: #f00;
-    cursor: pointer;
-  }
-  
-  .sidebar-divider {
-    margin: 10px 0; /* Add margin to create space */
-    border-bottom: 1px solid #ccc; /* Add the divider */
-  }
-  
-  .sidebar-links li {
-    margin-bottom: 5px;
-  }
-  
-  .sidebar-links a {
-    color: #777;
-    text-decoration: none;
-  }
-  
-  .sidebar-links a:hover {
-    color: #f00;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-toggle {
+  position: absolute;
+  top: 10px;
+  right: -40px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+
+.sidebar-toggle::before {
+  content: "\f0c9";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 20px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.sidebar-toggle:hover::before {
+  color: #f00;
+}
+
+.sidebar-content {
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #777;
+}
+
+.sidebar li::before {
+  content: none; 
+}
+
+.sidebar li:hover {
+  color: #f00;
+  cursor: pointer;
+}
+
+.sidebar-divider {
+  margin: 20px 0; 
+  border-bottom: 1px solid #ccc; 
+}
+
+.sidebar-links li {
+  margin-bottom: 35px; 
+}
+
+.sidebar-links a {
+  color: #777;
+  text-decoration: none;
+}
+
+.sidebar-links a:hover {
+  color: #f00;
+}
