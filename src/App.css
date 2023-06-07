@@ -28,7 +28,6 @@
   display: none;
 }
 
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -38,8 +37,6 @@
   }
 }
 
-
-
 .App {
   display: flex;
   flex-direction: column;
@@ -47,10 +44,10 @@
   text-align: center;
   position: relative;
 }
+
 .searchbar {
   display: flex;
   justify-content: center;
-  
 }
 
 .navbar {
@@ -74,15 +71,13 @@
   margin-top: auto;
 }
 
-
 .sidebar {
   position: fixed;
-  top: 8.4%; 
+  top: 8.4%;
   left: 0;
   bottom: 0;
-  width: 200px; 
-  background-color: #f8f8f8; 
-
+  width: 200px;
+  background-color: #f8f8f8;
 }
 
 .footer {
@@ -94,3 +89,23 @@
   margin-top: auto;
 }
 
+/* Responsive Modifications */
+
+@media only screen and (max-width: 768px) {
+  .App-header {
+    font-size: calc(10px + 1.5vmin);
+  }
+  
+  .navbar {
+    position: static;
+  }
+  
+  .content {
+    margin-top: 0;
+  }
+  
+  .sidebar {
+    position: static;
+    width: 100%;
+  }
+}
