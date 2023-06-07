@@ -13,6 +13,7 @@ function About() {
 <div className="container-fluid p-5">
   <div>
   <h4 className="display-6">About This Project</h4>
+  <br />
   <p>
     The YouTube Clone project is an application designed to allow users to search for YouTube videos using the YouTube API and watch their chosen videos from a list. The project aims to assess the proficiency of React skills acquired by the developers (listed below).
     </p>
@@ -34,6 +35,7 @@ function About() {
   </p>
   </div>
   <div>
+  <br />
     <h4 className="display-6">About Us</h4>
 
   <img 
