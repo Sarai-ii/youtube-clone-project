@@ -14,6 +14,7 @@ const SideBar = ({ searchHistory }) => {
       <div className="sidebar-content">
         <ul className="sidebar-links">
           <li>
+          <div> 
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -24,9 +25,10 @@ const SideBar = ({ searchHistory }) => {
             >
               <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
             </svg>
-            <a>    Library</a>
+               Library</div>
           </li>
           <li>
+          <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -40,9 +42,10 @@ const SideBar = ({ searchHistory }) => {
               <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
             </svg>
 
-            <a>    History</a>
+                 History</div>
           </li>
           <li>
+          <div> 
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -54,9 +57,10 @@ const SideBar = ({ searchHistory }) => {
               <path d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0v6h8V1H4zm8 8H4v6h8V9zM1 1v2h2V1H1zm2 3H1v2h2V4zM1 7v2h2V7H1zm2 3H1v2h2v-2zm-2 3v2h2v-2H1zM15 1h-2v2h2V1zm-2 3v2h2V4h-2zm2 3h-2v2h2V7zm-2 3v2h2v-2h-2zm2 3h-2v2h2v-2z" />
             </svg>
 
-            <a>    Your Videos</a>
+                Your Videos</div>
           </li>
           <li>
+          <div> 
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -69,9 +73,10 @@ const SideBar = ({ searchHistory }) => {
               <path d="M5.667 16C4.747 16 4 15.254 4 14.333v-1.86A5.985 5.985 0 0 1 2 8c0-1.777.772-3.374 2-4.472V1.667C4 .747 4.746 0 5.667 0h4.666C11.253 0 12 .746 12 1.667v1.86a5.99 5.99 0 0 1 1.918 3.48.502.502 0 0 1 .582.493v1a.5.5 0 0 1-.582.493A5.99 5.99 0 0 1 12 12.473v1.86c0 .92-.746 1.667-1.667 1.667H5.667zM13 8A5 5 0 1 0 3 8a5 5 0 0 0 10 0z" />
             </svg>
 
-            <a>    Watch Later</a>
+                Watch Later</div>
           </li>
           <li>
+          <div> 
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -83,13 +88,13 @@ const SideBar = ({ searchHistory }) => {
               <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
             </svg>
 
-            <a>    Show More</a>
+                 Show More</div>
           </li>
         </ul>
         <div></div>
         <div className="sidebar-divider"></div>
         <div></div>
-        <h2>    Search History:</h2>
+        <h2>Search History:</h2>
         <ul>
           {searchHistory.map((search, index) => (
             <li key={index}>{search}</li>
