@@ -43,17 +43,37 @@
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  min-height: 100vh;
   text-align: center;
-  position: relative; 
+  position: relative;
 }
-
-
 .searchbar {
   display: flex;
   justify-content: center;
   
 }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.content {
+  margin-top: 64px; /* Adjust this value to match the height of your navbar */
+}
+
+.footer {
+  background-color: #212121;
+  color: #ffffff;
+  padding: 4px;
+  position: relative;
+  width: 100%;
+  margin-top: auto;
+}
+
 
 .sidebar {
   position: fixed;
@@ -69,8 +89,8 @@
   background-color: #212121;
   color: #ffffff;
   padding: 4px;
-  position: absolute; 
-  bottom: 0;
+  position: relative;
   width: 100%;
+  margin-top: auto;
 }
 
