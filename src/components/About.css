@@ -1,4 +1,9 @@
 * {
     font-size: inherit;
-    text-align:justify;
+    text-align:start;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
 }
