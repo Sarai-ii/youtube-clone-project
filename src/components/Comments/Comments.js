@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
+import "./Comments.css"
 
 export default function Comments() {
-  const { id } = useParams();
+  // const { id } = useParams();
 
   const [comments, setComments] = useState([]);
   const [comment, setComment] = useState({
@@ -55,27 +56,27 @@ export default function Comments() {
   return (
     <div className=''>
       <div className=''>
-        <div>
+        <div className=''>
           Total comments: {commentCount}
           <h4>Add a comment....</h4>
           <hr />
         </div>
         <form className='' onSubmit={handleComment}>
-          <div className='form-floating mb-3'>
+          <div className='form-floating mb-3 rounded-pill shadow'>
             <input
               type='text'
               id='name'
-              className='form-control'
+              className='form-control bg-light'
               value={comment.name}
               onChange={handleTextChange}
             />
             <label htmlFor='name'>Name:</label>
           </div>
-          <div className='form-floating mb-3'>
+          <div className='form-floating mb-3 rounded-pill shadow '>
             <input
               type='text'
               id='comment'
-              className='form-control'
+              className='form-control bg-light'
               value={comment.comment}
               onChange={handleTextChange}
             />
@@ -83,7 +84,7 @@ export default function Comments() {
           </div>
           <input
             type='submit'
-            className='row comment-button btn btn-outline-secondary-active mb-3'
+            className='row btn comment-btn mb-3 '
             value={editComment !== -1 ? 'Update Comment' : 'Comment'}
           />
         </form>
@@ -94,15 +95,15 @@ export default function Comments() {
             return (
               <li key={index}>
                 {com.name}: {com.comment}
-                <div className='btn'>
+                <div className=''>
                   <button
-                    className='btn btn-outline-secondary p-1'
+                    className=' delete btn btn-secondary mr-3 p-1'
                     onClick={() => handleDelete(index)}
                   >
                     Delete
                   </button>
                   <button
-                    className='btn btn-outline-secondary p-1'
+                    className='edit btn btn-outline-secondary ml-3 p-1'
                     onClick={() => handleEdit(index)}
                   >
                     Edit
