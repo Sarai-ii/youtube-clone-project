@@ -1,8 +1,26 @@
-#name, #comment {
+.comment-btn {
+    background-color: transparent;
+    border: none;
+}
+.comment-btn:hover {
+    background-color: gray;
+    padding: 2px;
+}
+.comment-btn:focus{
+    background-color: rgb(117, 178, 209) ;
+    color: black;
 
 }
+.delete, 
+.edit {
+    margin-right: 10px;
 
-.comments_button {
-    padding: 0;
+}
+.delete:focus,
+.delete:hover {
+    border: none;
 }
 
+.edit {
+    border: none;
+}
