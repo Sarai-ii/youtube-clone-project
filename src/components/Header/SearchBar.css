@@ -33,3 +33,21 @@
     background-color: #990000;
     transform: translateY(1px);
 }
+
+@media (max-width: 600px) {
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar {
+        width: 80%;
+        max-width: 400px;
+    }
+
+    .submit-button {
+        width: auto;
+        padding: 8px 16px;
+        margin-top: 10px;
+    }
+}
